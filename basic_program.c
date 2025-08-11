@@ -20,33 +20,6 @@ int fibonacci(int n)
     }
     return b;
 }
-int is_prime(int num)
-{
-    if (num <= 1)
-        return 0;
-    for (int i = 2; i * i <= num; i++)
-    {
-        if (num % i == 0)
-            return 0;
-    }
-    return 1;
-}
-
-int nth_prime(int n)
-{
-    int count = 0;
-    int num = 2;
-    while (1)
-    {
-        if (is_prime(num))
-        {
-            count++;
-            if (count == n)
-                return num;
-        }
-        num++;
-    }
-}
 
 int main()
 {
